@@ -1,4 +1,7 @@
 <?php
+/*
+ * 测试变量与常量
+ */
 header("Content-Type:text/html; charset=utf-8");
 $num = 1;
 $num = "哈哈哈哈";
