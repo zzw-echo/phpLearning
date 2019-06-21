@@ -15,3 +15,17 @@ var_dump($a == $b);
 //全等判断
 var_dump($a === $b);
 
+echo '<hr/>';
+
+$a = 'weekend';
+$b = 'goods';
+
+//逻辑与
+var_dump($a=='weekend' && $b == 'good');
+
+//逻辑或
+var_dump($a == 'weekend' || $b == 'good');
+
+//逻辑非
+var_dump($b == 'good');
+var_dump(!($b == 'good'));
