@@ -50,3 +50,14 @@ echo '<hr/>';
 $a = 10;
 $b = $a>10 ? 100 : 0;
 echo $b;
+
+//自操作符
+echo '<hr/>';
+$a = $b = 1;
+$a++;
+++$b;
+echo $a,$b;
+
+echo '<hr/>';
+echo $a++,++$b;
+echo $a,$b;
