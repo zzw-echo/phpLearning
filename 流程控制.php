@@ -38,3 +38,48 @@ if ($day == 'sunday'){
 }else{
     echo 'work';
 }
+
+echo '<hr/>';
+//分支结构：switch分支
+
+//根据日期做不同的事情
+$day = 1;
+switch ($day){
+    case 1:
+        echo '1';
+        break;
+    case 2:
+        echo '2';
+        break;
+    case 3:
+        echo '3';
+        break;
+    case 4:
+        echo '4';
+        break;
+    default:
+        echo 'error';
+        break;
+}
+
+echo '<hr/>';
+
+//循环结构：for循环
+
+//从1到10输出：初始为1，结果为10
+//for ($i =1;$i<=10;$i++){
+//    echo $i,'<br/>';
+//}
+//echo $i;
+
+//for ($i = 1,$end = 10; $i <= $end; $i++){
+//    echo $i,'<br/>';
+//}
+
+//无条件for循环
+//for (;;){
+//    echo 'hello world<br/>';
+//}
+
+
+
