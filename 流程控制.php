@@ -80,6 +80,17 @@ echo '<hr/>';
 //for (;;){
 //    echo 'hello world<br/>';
 //}
+$i = 45;
+while ($i <= 55){
+    echo $i++,'<br/>';
+//    $i++;
+}
 
-
+$i = 1;
+ do{
+     if ($i %2 !=1){
+         echo $i,'<br/>';
+     }
+     $i++;
+ }while($i <= 10);
 
