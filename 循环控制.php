@@ -9,11 +9,12 @@ while ($i <= 100){
     if ($i % 5 != 0){
         $i++;
         continue;
+//        break;
     }
 
     echo $i++,'<br/>';
-
-
 }
+
+//echo $i;
 
 
