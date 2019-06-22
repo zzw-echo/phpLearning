@@ -20,7 +20,7 @@
     ?>
 </table>
 
-<table border="1">
+<table border='1'>
     <?php
     for ($i = 1;$i<10;$i++) :
         ?>
