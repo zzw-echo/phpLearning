@@ -15,3 +15,5 @@ echo '<hr/>';
 echo date('Y年 m月 d日 H:i:s',12345678),'<br/>';
 echo time(),'<br/>';
 echo microtime(),'<br/>';
+
+echo strtotime('tomorrow 10 hours');
