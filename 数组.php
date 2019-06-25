@@ -20,3 +20,17 @@ $arr3['key'] = 'value';
 var_dump($arr3);
 //索引数组，关联数组，混合数组
 
+echo '<br/>';
+
+$arr4[false] = false;
+$arr4[false] = false;
+$arr4[false] = false;
+$arr4[true] = true;
+$arr4[true] = true;
+$arr4[true] = true;
+$arr4[NULL] = NULL;
+$arr4[NULL] = NULL;
+$arr4[NULL] = NULL;
+
+var_dump($arr4);
+echo '<br/>';
