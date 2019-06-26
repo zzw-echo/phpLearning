@@ -18,4 +18,7 @@ for ($i = 0,$len = count($arr);$i<$len;$i++){
 echo '<pre>';
 print_r($arr);
 
+echo '<hr/>';
+
+
 
