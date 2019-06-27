@@ -4,7 +4,7 @@
 $arr = array(4,7,2,1,5,9,3);
 
 function merge_sort($arr){
-
+    //递归出口
     $len = count($arr);
     if ($len <= 1) return $arr;
 
@@ -12,6 +12,10 @@ function merge_sort($arr){
     $middle = floor($len/2);
     $left = array_slice($arr,0,$middle);
     $right = array_slice($arr,$middle);
+
+    //递归点
+    $left = merge_sort($left);
+    $right = merge_sort($right);
 
     //假设左边和右边都已排好序：二路归并
     $m = array();
