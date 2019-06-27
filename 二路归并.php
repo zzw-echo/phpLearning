@@ -10,3 +10,4 @@ while (count($arr1)&&count($arr2)){
 
 
 print_r(array_merge($arr3,$arr1,$arr2));
+
