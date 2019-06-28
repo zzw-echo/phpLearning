@@ -74,8 +74,10 @@ class Index
 
 
         //查询数据
-        $result = Db::table('think_data')->where('id',2)->select();
+//        $result = Db::table('think_data')->where('id',2)->select();
 
+        //删除数据
+        $result = Db::table('think_data')->where('id',2)->delete();
 
 
         dump($result);
