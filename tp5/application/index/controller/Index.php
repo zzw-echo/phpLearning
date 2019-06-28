@@ -62,4 +62,23 @@ class Index
 
     }
 
+    public function dbconf()
+    {
+        //插入记录
+//        $result = Db::table('think_data')->insert(['name'=>'黄晓明','status'=>1]);
+//        $result = Db::table('think_data')->insert(['name'=>'黄晓明']);
+
+
+        //更新记录
+//        $result = Db::table('think_data')->where('id',2)->update(['name'=>"刘德华",'status'=>0]);
+
+
+        //查询数据
+        $result = Db::table('think_data')->where('id',2)->select();
+
+
+
+        dump($result);
+    }
+
 }
