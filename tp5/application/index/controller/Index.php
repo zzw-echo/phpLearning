@@ -42,8 +42,24 @@ class Index
     public function db()
     {
         //插入数据
-        $result = Db::execute('insert into think_data (name,status) values ("周杰伦",1)');
+//        $result = Db::execute('insert into think_data (name,status) values ("周杰伦",1)');
+//        $result = Db::execute('insert into think_data (name,status) values ("frame",1)');
+//        $result = Db::execute('insert into think_data (name,status) values ("6666",1)');
+//        dump($result);
+        //修改数据
+//        $result = Db::execute('update think_data set name = "张学友",status = 0 where id = 1');
+//        dump($result);
+
+        //删除数据
+//        $result = Db::execute('delete from think_data where id =1 ');
+//        dump($result);
+
+        //查询数据
+
+        $result = Db::query('select * from think_data');
         dump($result);
+//        print_r($result);
+
     }
 
 }
