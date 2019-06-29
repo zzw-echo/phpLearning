@@ -77,10 +77,28 @@ class Index
 //        $result = Db::table('think_data')->where('id',2)->select();
 
         //删除数据
-        $result = Db::table('think_data')->where('id',2)->delete();
+//        $result = Db::table('think_data')->where('id',2)->delete();
+//        dump($result);
+
+//        Db::name('data') ->insert(['name'=>'666']);
 
 
-        dump($result);
+        //php5助手函数
+//        $db = db('data');
+
+//        $db -> insert(['name'=>'Dawn','status'=>1]);
+//        $db->where('id',5)->update(['name'=>'郭富城','status'=>2]);
+//        $list = $db->where('id',5)->select();
+//        dump($list);
+
+//        $db->where('id',5)->delete();
+
+        $list = Db::name('data')->where('status',1)->field('id','status')->order('id','desc')
+            ->limit(3)->select();
+        dump($list);
+
     }
+
+    //虽然今天什么都没写，但我想提交一下刷个小绿格子
 
 }
