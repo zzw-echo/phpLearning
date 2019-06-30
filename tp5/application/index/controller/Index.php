@@ -56,8 +56,8 @@ class Index
 
         //查询数据
 
-        $result = Db::query('select * from think_data');
-        dump($result);
+//        $result = Db::query('select * from think_data');
+//        dump($result);
 //        print_r($result);
 
     }
@@ -93,12 +93,44 @@ class Index
 
 //        $db->where('id',5)->delete();
 
-        $list = Db::name('data')->where('status',1)->field('id','status')->order('id','desc')
-            ->limit(3)->select();
-        dump($list);
+//        $list = Db::name('data')->where('status',1)->field('id','status')->order('id','desc')
+//            ->limit(3)->select();
+//        dump($list);
 
     }
 
-    //虽然今天什么都没写，但我想提交一下刷个小绿格子
+    public function dbdemo0630(){
+//        $result = Db::table('think_data')->where('id',7)->update(['status'=>2]);
+//        dump($result);
+//        $db = db('data');
+//        $result = $db->where('id',9)->update(['status'=>2]);
+//        dump($result);
+
+//        $result = Db::name('data')->where('status',1)->find();
+
+//        $result = Db::name('data')->where('status',1)->select();
+
+//        $result = Db::name('data')->where('id',11)->update(['name'=>'黎明']);
+
+        //模糊查询
+//        $result = Db::name('data')->where('name','like','%明%')->select();
+
+        //区间查询
+//        $result = Db::name('data')->where('id','between',[2,6])->select();
+
+
+        dump($result);
+
+
+
+
+
+    }
+
+
+
+
+
+
 
 }
