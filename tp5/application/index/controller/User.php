@@ -17,6 +17,11 @@ class User{
         }
     }
 
+    public function add3(){
+        $user = new UserModel();
+        $user->save(['name'=>'晚风','email'=>'aaa@aaa.aaa']);
+    }
+
     public function add2(){
         $user['name'] = '看云';
         $user['email'] = 'kanyun@aaa.aaa';
@@ -44,6 +49,44 @@ class User{
 
     }
 
+    //更新数据
+    public function update(){
+        $user = UserModel::get(1);
+//        dump($user);
+        $user->name = '安迪';
+        $user->email = 'andi@aa.aaa';
+        if ($user->save()){
+            return 'success';
+        }else{
+            return 'fail';
+        }
+    }
+
+    public function update2(){
+        $user = new UserModel();
+        $user ->save(['name'=>'刘涛','email'=>'liu@aa.aa'],['id'=>1]);
+    }
+
+    //批量更新
+    public function batchUpdate(){
+        $user = new UserModel();
+        $list = [
+            ['id'=>2,'name'=>'钟汉良','email'=>'ll@aa.aaa'],
+            ['id'=>3,'name'=>'引言','birthday'=>strtotime('2000-1-11')]
+        ];
+        $user->saveAll($list);
+    }
+
+    //通过数据库类更新数据
+    public function update3(){
+        $user = new UserModel();
+        $user -> update(['id'=>4,'name'=>'asdcc']);
+    }
+
+    //静态
+    public function update4(){
+        UserModel::update(['id'=>4,'name'=>'haoann','email'=>'haa@aaa.aaa']);
+    }
 
 
 }
