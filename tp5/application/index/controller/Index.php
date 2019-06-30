@@ -110,6 +110,8 @@ class Index
 
 //        $result = Db::name('data')->where('status',1)->select();
 
+
+//        $result = Db::name('data')->where('id',13)->setField('status',0);
 //        $result = Db::name('data')->where('id',11)->update(['name'=>'黎明']);
 
         //模糊查询
@@ -118,7 +120,13 @@ class Index
         //区间查询
 //        $result = Db::name('data')->where('id','between',[2,6])->select();
 
+//        $data = [
+//            ['name'=>'林志玲','status'=>1],
+//            ['name'=>'林志颖','status'=>2]
+//        ];
+//        $result = Db::name('data')->insertAll($data);
 
+        $result = Db::name('data')->where('id',3)->setInc('status',2);
         dump($result);
 
 
