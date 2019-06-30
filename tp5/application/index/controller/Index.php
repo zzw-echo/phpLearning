@@ -126,9 +126,9 @@ class Index
 //        ];
 //        $result = Db::name('data')->insertAll($data);
 
-        $result = Db::name('data')->where('id',3)->setInc('status',2);
-        dump($result);
-
+//        $result = Db::name('data')->where('id',3)->setInc('status',2);
+//        dump($result);
+//
 
 
 
