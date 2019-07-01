@@ -77,6 +77,11 @@ class User{
         $user->saveAll($list);
     }
 
+    public function batchUpdate2(){
+        $user = new UserModel();
+        
+    }
+
     //通过数据库类更新数据
     public function update3(){
         $user = new UserModel();
@@ -105,6 +110,21 @@ class User{
         $user = new UserModel();
         $result = $user->where('name','钟汉良')->find();
         echo $result->birthday;
+    }
+
+    public function select4(){
+        $list = UserModel::all([1,2,4,5]);
+        foreach ($list as $key=>$value){
+            echo $value -> name.'<br/>';
+            echo $value -> birthday.'<br/>';
+        }
+    }
+
+
+
+    public function select5(){
+        $user = new UserModel();
+        $result = $user->where('');
     }
 
 
