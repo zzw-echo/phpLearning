@@ -88,5 +88,28 @@ class User{
         UserModel::update(['id'=>4,'name'=>'haoann','email'=>'haa@aaa.aaa']);
     }
 
+    //查询数据
+    public function select(){
+        $user = UserModel::get(1);
+//        dump($user);
+        echo $user->name.'<br/>';
+        echo $user->email.'<br/>';
+    }
+
+    public function select2(){
+        $user = UserModel::get(['name'=>'刘涛']);
+        echo $user->email;
+    }
+
+    public function select3(){
+        $user = new UserModel();
+        $result = $user->where('name','钟汉良')->find();
+        echo $result->birthday;
+    }
+
+
+
+
+
 
 }
