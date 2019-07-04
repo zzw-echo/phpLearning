@@ -124,9 +124,22 @@ class User{
 
     public function select5(){
         $user = new UserModel();
-        $result = $user->where('');
+        $result = $user->where('status',1)->limit(2)->order('id','desc')->select();
+//        dump($result);
+        foreach ($result as $key=>$value){
+            echo $value['name'].'<br/>';
+            echo $value['email'].'<br/>';
+        }
     }
 
+    //聚合函数的调用
+    public function select6(){
+        $user = new UserModel();
+        echo $user->count('id').'<br/>';
+        echo $user->max('birthday').'<br/>';
+    }
+
+    //删除数据
 
 
 
