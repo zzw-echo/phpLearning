@@ -140,6 +140,55 @@ class User{
     }
 
     //删除数据
+    public function delete(){
+        $user = UserModel::get(2);
+        if ($user->delete()){
+            return '删除数据成功';
+        } else{
+            return '删除数据失败';
+        }
+    }
+
+    public function delete2(){
+        if (UserModel::destroy(3)){
+            return '数据删除成功';
+        }else{
+            return '数据删除失败';
+        }
+    }
+
+    //删除多条数据
+    public function delete3(){
+        if (UserModel::destroy([4,5])){
+            return '删除多条数据成功';
+        } else{
+            return '删除多条数据失败';
+        }
+    }
+
+    public function addafterd(){
+        $user = new UserModel();
+        $array = [
+            ['name' => '111','email' => '111'],
+            ['name' => '222','email' => '222']
+        ];
+        if ($user->saveAll($array)){
+            return '批量添加成功';
+        }else{
+            return '批量添加失败';
+        }
+    }
+
+    //删除状态为2的数据
+    public function delete4(){
+        if (UserModel::destroy(['status'=>2])){
+            return '删除成功';
+        }else{
+            return '删除失败';
+        }
+    }
+
+
 
 
 
