@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {$Think.server.server_name}<br/>
+    {$Think.APP_PA}<br/>
+    {$name|md5}<br/>
+    {$time|date="y-m-d","###"}<br/>
+    {$name|strtoupper|substr=0,3}<br/>
+
+    {:substr(strtoupper($name),0,3)}<br/>
+</body>
+</html>

@@ -35,6 +35,31 @@ class Index extends Controller
         return $this->fetch();
     }
 
+    public function index3(){
+
+        $name = 'hello world!';
+        $time = time();
+        $this->assign('name',$name);
+        $this->assign('time',$time);
+        return $this->fetch();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function view2(){
         return $this->fetch('index',[
