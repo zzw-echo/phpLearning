@@ -3,12 +3,32 @@ namespace app\index\controller;
 
 //use think\Request;
 use think\Db;
+use think\Controller;
 
-class Index
+class Index extends Controller
 {
     public function index()
     {
-        echo 'hello world!';
+        //赋值给模板变量
+        $name = 'today is real a nice day 哒哒哒';
+        $email = 'aaa@aaa.aaa';
+        $this->assign('name',$name);
+        $this->assign('email',$email);
+
+        //批量赋值
+/*        $this->assign(
+            [
+                'name'=>$name,
+                'eamil'=>$email
+            ]
+        );*/
+
+        return  $this->fetch();
+
+//        echo 'hello world!';
+
+
+
     }
 
     public function testRequest()
