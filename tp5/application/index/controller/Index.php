@@ -5,6 +5,8 @@ namespace app\index\controller;
 use think\Db;
 use think\Controller;
 
+define('APP_PA','这是自己定义的常量的值');
+
 class Index extends Controller
 {
     public function index()
@@ -27,10 +29,12 @@ class Index extends Controller
         return $this->fetch('user/user');
 
 //        echo 'hello world!';
-
-
-
     }
+
+    public function index2(){
+        return $this->fetch();
+    }
+
 
     public function view2(){
         return $this->fetch('index',[
