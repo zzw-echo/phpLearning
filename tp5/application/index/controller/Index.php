@@ -23,7 +23,8 @@ class Index extends Controller
             ]
         );*/
 
-        return  $this->fetch();
+//        return  $this->fetch();
+        return $this->fetch('user/user');
 
 //        echo 'hello world!';
 
