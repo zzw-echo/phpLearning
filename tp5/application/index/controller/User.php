@@ -188,6 +188,15 @@ class User{
         }
     }
 
+    public function delete5(){
+        $result = UserModel::where('id','>',9)->delete();
+        if ($result){
+            return '删除成功';
+        }else{
+            return '删除失败';
+        }
+    }
+
 
 
 
