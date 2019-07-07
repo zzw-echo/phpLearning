@@ -6,5 +6,17 @@
 </head>
 <body>
     {extend name="base"/}
+    {block name="header"}
+    {__BLOCK__}
+    <div style="width: 100%;height: 100px;background-color: red;">
+        这是子模板的头部信息
+    </div>
+    {/block}<br/>
+
+    {block name="footer"}
+    <div style="width: 100%;height: 100px;background-color: pink;">
+        这是子模板的底部信息
+    </div>
+    {/block}<br/>
 </body>
 </html>
