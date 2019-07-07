@@ -53,7 +53,9 @@ class Index extends Controller
         return $this->fetch();
     }
 
-
+    public function list1(){
+        return $this->fetch();
+    }
 
 
 
