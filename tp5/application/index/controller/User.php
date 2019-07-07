@@ -2,7 +2,9 @@
 namespace app\index\controller;
 use app\index\model\User as UserModel;
 
-class User{
+use think\Controller;
+
+class User extends Controller{
 
     //新增一条数据的方法
     public function add(){
@@ -197,6 +199,15 @@ class User{
         }
     }
 
+    public function list1(){
+        $list1 = UserModel::all();
+        $this->assign('list1',$list1);
+        return $this->fetch();
+    }
+
+    public function list2(){
+        return $this->fetch();
+    }
 
 
 
