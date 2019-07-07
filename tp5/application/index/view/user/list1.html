@@ -5,8 +5,21 @@
     <title>用户列表</title>
 </head>
 <body>
-    {volist name="list1" id="vo"}
+    {volist name="list1" id="vo" offset="0" length="3"}
         {$vo.id}====>{$vo.name}<br/>
     {/volist}
+
+    {foreach $list1 as $value}
+        {$value.id}:{$value.name}<br/>
+    {/foreach}<br/>
+
+    {for start="1" end="10"}
+        {$i}
+    {/for}
+
+    {php}echo 'hel;lo world!';{/php}
+    <?php echo 'welcome'; ?>
+
+
 </body>
 </html>
