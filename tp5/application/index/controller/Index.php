@@ -44,6 +44,15 @@ class Index extends Controller
         return $this->fetch();
     }
 
+    public function index4(){
+
+        $name = 'hello world!';
+        $time = time();
+        $this->assign('name',$name);
+        $this->assign('time',$time);
+        return $this->fetch();
+    }
+
 
 
 
