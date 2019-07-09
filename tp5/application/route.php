@@ -9,6 +9,14 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+use think\Route;
+Route::get('/',function (){
+    return 'hello,World!';
+});
+
+Route::rule('new/:id','index/Index/list2');
+
+
 return [
     '__pattern__' => [
         'name' => '\w+',

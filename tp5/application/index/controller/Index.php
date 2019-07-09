@@ -57,7 +57,9 @@ class Index extends Controller
         return $this->fetch();
     }
 
-
+    public function list2(){
+        return '这是自己定义的路由规则';
+    }
 
 
 
