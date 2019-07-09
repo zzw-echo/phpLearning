@@ -65,7 +65,9 @@ class Index extends Controller
         return '这是定义简化的方法';
     }
 
-
+    public function test($id){
+        dump($id);
+    }
 
 
 

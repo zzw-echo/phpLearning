@@ -8,18 +8,20 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-
-use think\Route;
-Route::get('/',function (){
-    return 'hello,World!';
-});
+//
+//use think\Route;
+//Route::get('/',function (){
+//    return 'hello,World!';
+//});
 
 //Route::rule('new/:id','index/Index/list2');
-//Route::get('new/:id','index/Index/read');
-Route::post('new/:id','index/Index/test');
+//Route::get('new','index/Index/read');
+//Route::post('new/:id','index/Index/test');
 
 
 return [
+    'new'=>'index/Index/read',
+
     '__pattern__' => [
         'name' => '\w+',
     ],
