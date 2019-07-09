@@ -14,7 +14,9 @@ Route::get('/',function (){
     return 'hello,World!';
 });
 
-Route::rule('new/:id','index/Index/list2');
+//Route::rule('new/:id','index/Index/list2');
+//Route::get('new/:id','index/Index/read');
+Route::post('new/:id','index/Index/test');
 
 
 return [

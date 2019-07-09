@@ -61,6 +61,9 @@ class Index extends Controller
         return '这是自己定义的路由规则';
     }
 
+    public function read(){
+        return '这是定义简化的方法';
+    }
 
 
 
