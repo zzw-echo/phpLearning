@@ -18,6 +18,8 @@
 //Route::get('new','index/Index/read');
 //Route::post('new/:id','index/Index/test');
 
+Route::resource('blog','index/blog');
+Route::controller('detail','index/detail');
 
 return [
     'new'=>'index/Index/read',
