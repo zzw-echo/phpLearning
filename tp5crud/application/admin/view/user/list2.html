@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+
+<div>
+    <div>
+        <strong>用户列表</strong>
+        <span style="float: right;"><strong><a href="add">添加管理员</a> </strong></span>
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="10%">ID</th>
+            <th width="20%">用户名</th>
+            <th width="15%">密码</th>
+            <th width="20%">邮箱</th>
+            <th width="15%">创建时间</th>
+        </tr>
+
+        {foreach $data as $value}
+        <tr>
+            <th>{$value.id}</th>
+            <th>{$value.name}</th>
+            <th>{$value.password}</th>
+            <th>{$value.email}</th>
+            <th>{$value.create_time}</th>
+            <td>
+                <div class="button-group">
+                    <a  href="edit"><span ></span>修改</a>
+                    <a  href="delete"><span></span>删除</a>
+                </div>
+            </td>
+        </tr>
+        {/foreach}
+
+
+    </table>
+    <div align="center"></div>
+
+</div>
+</body></html>

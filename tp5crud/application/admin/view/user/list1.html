@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/css/pintuer.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/pintuer.js"></script>
+</head>
+<body>
+
+<div class="panel admin-panel">
+    <div class="panel-head">
+        <strong class="icon-reorder">用户列表</strong>
+        <span style="float: right;"><strong class="icon-reorder"><a href="add">添加管理员</a> </strong></span>
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="10%">ID</th>
+            <th width="20%">用户名</th>
+            <th width="15%">密码</th>
+            <th width="20%">邮箱</th>
+            <th width="15%">创建时间</th>
+        </tr>
+
+        {foreach $data as $value}
+        <tr>
+           <th>{$value.id}</th>
+           <th>{$value.name}</th>
+           <th>{$value.password}</th>
+           <th>{$value.email}</th>
+           <th>{$value.create_time}</th>
+            <td>
+                <div class="button-group">
+                    <a class="button border-main" href="edit?id={$value.id}"><span class="icon-edit"></span>修改</a>
+                    <a class="button border-red" href="delete?id={$value.id}"><span class="icon-trash-o"></span>删除</a>
+                </div>
+            </td>
+        </tr>
+        {/foreach}
+
+    </table>
+    <div align="center">{$page}</div>
+
+</div>
+</body></html>
