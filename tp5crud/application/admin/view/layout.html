@@ -19,11 +19,33 @@
             <a type="button" class="btn btn-success navbar-btn" href="index">
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;前台首页
             </a>
-            <a></a>
-
+            <a type="button" class="btn btn-primary navbar-btn" href="userlist">
+                <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>&nbsp;用户列表
+            </a>
+            <a type="button" class="btn btn-danger navbar-btn" href="{:url('admin/Index/logout')}">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;退出登录
+            </a>
         </div>
     </div>
 </nav>
+
+<div class="row">
+    <div class="col-md-2 my-left">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"/>&nbsp;菜单列表
+            </a>
+            <a href="#" class="list-group-item">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"/>&nbsp;用户管理
+            </a>
+            <a href="#" class="list-group-item">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"/>&nbsp;网站设置
+            </a>
+
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
