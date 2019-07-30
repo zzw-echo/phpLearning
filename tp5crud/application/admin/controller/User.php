@@ -49,7 +49,6 @@ class User extends Base{
             $this->error($val->getError());
             exit();
         }
-
         $user = new UserModel($data);
         $ret = $user->allowField(true)->save();
         if ($ret){
@@ -102,8 +101,10 @@ class User extends Base{
             $this->error('删除用户失败');
         }
         */
-
     }
+
+
+    //================================================
 
 
 

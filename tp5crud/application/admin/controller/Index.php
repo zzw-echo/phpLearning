@@ -39,6 +39,10 @@ class Index extends Controller{
         $this->success('推出登录成功','Index/login');
     }
 
+
+    //========================================================================
+
+
     public function index(){
         return $this->fetch();
     }
@@ -57,7 +61,7 @@ class Index extends Controller{
         $user = new PersonModel($data);
         $ret = $user->allowField(true)->save();
         if ($ret){
-            $this->success('恭喜你注册成功','Index/index');
+            $this->success('恭喜你注册成功','Index/indexold');
         }else{
             $this->error('用户注册失败');
         }
