@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="晚风晴">
+    <link rel="stylesheet" type="text/css" href="/css/particleStyle.css">
+    <link rel="stylesheet" type="text/css" href="/css/fishing.css">
+
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/verificationNumbers.js"></script>
+    <script src="/js/Particleground.js"></script>
+    <script>
+        $(document).ready(function () {
+            //粒子背景特效
+            $('body').particleground({
+               dotColor: 'white',
+               lineColor: 'white'
+            });
+            //验证码
+            createCode();
+            //测试提交，对接程序删除即可
+            $(".submit_btn").click(function () {
+                location.href = "index.html"/*tpa=http://***index.html*/;
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

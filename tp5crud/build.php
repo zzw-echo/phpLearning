@@ -16,8 +16,8 @@ return [
     // 定义demo模块的自动生成 （按照实际定义的文件名生成）
     'demo'     => [
         '__file__'   => ['common.php'],
-        '__dir__'    => ['behavior', 'controller', 'model', 'view'],
-        'controller' => ['Index', 'Test', 'UserType'],
+        '__dir__'    => ['behavior', 'controller1', 'model', 'view'],
+        'controller1' => ['Index', 'Test', 'UserType'],
         'model'      => ['User', 'UserType'],
         'view'       => ['indexold/indexold'],
     ],

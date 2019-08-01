@@ -41,8 +41,7 @@ class Index extends Controller{
 
 
     //========================================================================
-
-
+/*
     public function index(){
         return $this->fetch();
     }
@@ -66,8 +65,7 @@ class Index extends Controller{
             $this->error('用户注册失败');
         }
     }
-
-
+*/
 
 
 }

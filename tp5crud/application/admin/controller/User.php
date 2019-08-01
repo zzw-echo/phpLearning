@@ -26,11 +26,11 @@ class User extends Base{
         return $this->fetch();
     }
 
-    public function add1(){
+    public function add(){
         return $this->fetch();
     }
 
-    public function edit1(){
+    public function edit(){
         $id = input('get.id');
         $m = \app\admin\model\User();
         $data = UserModel::get($id);
@@ -41,7 +41,7 @@ class User extends Base{
     /**
      * 新增管理员的方法
      */
-    public function insert1(){
+    public function insert(){
         $data = input('post.');
 
         $val = new UserValidate();
@@ -61,7 +61,7 @@ class User extends Base{
     /**
      * 提交用户信息更新
      */
-    public function update1(){
+    public function update(){
         $data = input('post.');
         $id = input('post.id');
         $val = new UserValidate();
@@ -81,7 +81,7 @@ class User extends Base{
     /**
      * 删除用户信息
      */
-    public function delete1(){
+    public function delete(){
         //实现软删除的方法
         $id = input('get.id');
         $ret = UserModel::destroy($id);
@@ -107,13 +107,13 @@ class User extends Base{
     //================================================
 
 
-
+/*
     public function list1(){
-        /*
-        $data = UserModel::all();
-        $this->assign('data',$data);
-        return $this->fetch();
-        */
+
+//        $data = UserModel::all();
+//        $this->assign('data',$data);
+//        return $this->fetch();
+
         //通过分页显示数据
         $data = UserModel::paginate(2);
         $page = $data->render();
@@ -171,13 +171,13 @@ class User extends Base{
     public function delete(){
 
         //实现软删除的方法
-        /*$id = input('get.id');
+        $id = input('get.id');
         $ret = UserModel::destroy($id);
         if ($ret){
             $this->success('删除用户成功','User/list1');
         } else{
             $this->error('删除用户失败');
-        }*/
+        }
         $id = input('get.id');
         $ret = UserModel::destroy($id, true);
         if ($ret){
@@ -185,8 +185,9 @@ class User extends Base{
         } else {
             $this->error('删除用户失败');
         }
-
     }
+*/
+
 
 
 

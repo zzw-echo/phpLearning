@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="/css/demo2.css" type="text/css" rel="stylesheet" />
+</head>
+<body onload="isload()">
+<!--标题-->
+<div id="header">
+    <img src="/img/meizu.png">
+</div>
+<!--表单内容-->
+<div id="content">
+    <!--背景图-->
+    <img src="/img/beijing.png" style="width: 100%;" />
+    <form class="mainform" action="check" method="post">
+        <!--右上角二维码图片-->
+        <div class="QRcode"><img src="/img/erweima.png" /></div>
+        <!--登录标题字-->
+        <div class="login">
+            <div id="numberlogin" class="fli"><a href="login.html">账号登录</a></div>
+            <!--分割线-->
+            <div class="linebetween"><img src="/img/fengexian.png" /></div>
+        </div>
+
+        <!--账号框-->
+        <div class="xinxi">
+            <input class="phone" id="phone" name="name" style="font-size: 14px;" maxlength="11" placeholder="&nbsp;&nbsp;手机号/妹子账号" autocomplete="off" />
+        </div>
+        <!--密码框-->
+        <div class="yanzhengma">
+            <input type="text" id="yanzhengma" name="password" style="width: 278px;height: 50px;font-size: 14px;" class="huoqu" maxlength="10" autocomplete="off" placeholder="&nbsp;&nbsp;密码" />
+        </div>
+        <!--滚动条验证--><!--图片整合技术-->
+        <div>
+            <input name="code" placeholder="验证码" /><img src="{:captcha_src()}" alt="captcha" onclick="this.src=this.src+'?'" style="cursor: pointer;width: 160px;display: inline;float: right;position: relative;">
+        </div>
+        <!--hover出现图片框-->
+        <div class="matchingbox">
+            <div class="matching"></div>
+        </div>
+        <!--登录按钮-->
+        <input value="登 录" class="btn1" type="submit" style="cursor: pointer;">
+
+        <div class="last">
+            <a href="register.html">注册</a>
+            <a id="forget" href="#">忘记密码？</a>
+        </div>
+    </form>
+</div>
+
+<div class="footer">
+    <div class="footer1">
+        <div class="footer11"><a href="#"></a>晚</div>
+        <div class="footer11"><a href="#"></a>风</div>
+        <div class="footer11"><a href="#"></a>晴</div>
+        <div class="footer11"><a href="#"></a>&nbsp;</div>
+        <div class="footer11"><a href="#"></a>简体中文</div>
+
+    </div>
+    <div class="footer2">
+        <font size="2px;" color="black">客服微信：szfpp123</font>
+        <span><a href="#"><img id="img" src="img/kefu.png" /></a></span>
+    </div>
+    <div class="footer3">NanChang University&nbsp;<font>备案号：中ICP备666号-1&nbsp;经营许可证编号：中A1-20190801营业执照</font></div>
+</div>
+</body>
+
+<script src="/tp5crud/public/js/jquery-1.10.2.min.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript" src="/tp5crud/public/js/login.js"></script>
+</html>
